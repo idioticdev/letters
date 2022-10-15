@@ -1,6 +1,7 @@
 ---
 layout: '../../layouts/ArticleLayout.astro'
 title: 'Wait for me,'
+description: 'I’m already waiting for you.'
 lang: Buffering
 ---
 

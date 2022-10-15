@@ -4,19 +4,18 @@ import type { MarkdownLayoutProps } from "astro";
 
 type Props = MarkdownLayoutProps<{
   title: string;
+  description: string;
   lang: string;
 }>;
 
-const newAvatar = "https://avatars.githubusercontent.com/u/10626596?v=4";
-
 const {
-  frontmatter: { title, lang },
+  frontmatter: { title, lang, description },
 } = Astro.props;
 
 const site_title = `Dear ${lang},`;
 ---
 
-<DefaultLayout title={site_title}>
+<DefaultLayout title={site_title} description={description}>
   <h1 class="heading">{title}</h1>
   <article class="article">
     <slot />
