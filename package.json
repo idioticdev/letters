@@ -11,6 +11,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^3.0.0",
+    "@supabase/supabase-js": "^1.35.7",
     "astro": "^1.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.4",
+    "@types/react": "^18.0.21",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.17"
   }
 }

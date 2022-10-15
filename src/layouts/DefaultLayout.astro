@@ -1,0 +1,49 @@
+---
+import "../main.css";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const social_image = Astro.url.origin?.toString() + `/letters-code-og.png`;
+const meta_description = `A love letter to my ${title.toLowerCase()} you have a special place in my heart.`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={meta_description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:image" content={social_image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@idioticdev" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      href="https://fonts.bunny.net/css?family=lora:400|playfair-display-sc:900"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      data-domain="letters.idiotic.dev"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <slot />
+      <footer>
+        <p>
+          ❡ Dictated but not read by
+          <a href="https://twitter.com/idioticdev">@idioticdev</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
