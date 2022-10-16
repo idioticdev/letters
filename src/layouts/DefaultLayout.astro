@@ -7,7 +7,7 @@ export interface Props {
 
 const { title, description } = Astro.props;
 
-const image = Astro.url.origin?.toString() + `/letters-code-og.png`;
+const image = "/social-og.png";
 ---
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ const image = Astro.url.origin?.toString() + `/letters-code-og.png`;
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link
-      href="https://fonts.bunny.net/css?family=lora:400|playfair-display-sc:900"
+      href="https://fonts.bunny.net/css2?family=lora:400|playfair-display-sc:900?display=swap"
       rel="stylesheet"
     />
     <script
